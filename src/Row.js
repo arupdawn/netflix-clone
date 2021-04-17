@@ -23,13 +23,13 @@ function Row({title,fetchUrl,isLargeRow=false}) {
             <h2>{title}</h2>
             <div className="row__posters">
                 {movies.map((movie)=>{
-                    return (<>
-                        {/* <a href={`https://www.google.com/search?q=${movie?.name}`}> */}
+                    if(movie.poster_path)
+                    return (
                         <img className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                             key={movie.id}
                             loading="lazy"
                             target="_blank"
-                            src={`${base_url}${''}${isLargeRow ? movie?.poster_path : movie?.poster_path}`}
+                            src={`${base_url}${''}${movie?.poster_path}`}
                             onClick={()=>{
                                 if(!isLargeRow){
                                     if(movie?.name){
@@ -42,9 +42,7 @@ function Row({title,fetchUrl,isLargeRow=false}) {
                                 }
                             }}
                         />
-                        {/* </a> */}
-                        <h5></h5>
-                    </>)}
+                    )}
                 )}
             </div>
         </div>

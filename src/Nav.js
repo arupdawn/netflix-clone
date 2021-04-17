@@ -1,6 +1,8 @@
 import React from "react";
 import "./Nav.css";
 import { useState, useEffect } from "react";
+import NetflixLogog from "./assests/netflixLogo.png";
+import NetflixAvatart from "./assests/netflix-avatar.png";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -23,12 +25,12 @@ function Nav() {
       <div className="nav__contents">
         <img
           className="nav__logo"
-          src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+          src={NetflixLogog}
           alt=""
         />
         <img
           className="nav__avatar"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+          src={NetflixAvatart}
           alt=""
         />
       </div>
