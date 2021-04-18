@@ -1,0 +1,127 @@
+.loginScreen{
+    position: relative; /*doubts*/
+    height: 100%;
+    background: url('../assests/NetflixLoginPageBackground.PNG') center no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.loginScreen__logo{
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding-left: 20px;
+}
+
+.loginScreen__body{
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    margin: auto !important;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
+}
+.loginScreen__body > h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+    max-width: 720px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginScreen__body > h2 {
+    font-size: 1.825rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.loginScreen__body > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.loginScreen__gradient{
+    width: 100%;
+    z-index: 1;
+    height: 120vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.9) 0,
+        rgba(0,0,0,0) 65%,
+        rgba(0,0,0,0.8) 100%
+    );
+}
+
+.loginScreen__signin{
+    position: fixed;
+    right: 40px;
+    top: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    outline: none;
+    color: white;
+    background-color: #e50914;
+    border-radius: 2px;
+}
+
+.loginScreen__form{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.loginScreen__input{
+    margin: 20px;
+}
+.loginScreen__input > form >input{
+    padding: 10px;
+    outline-width: 0px;
+    height: 30px;
+    width: 35%;
+    border: none;
+    max-width: 600px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.loginScreen__getStarted{
+    outline-width: 0px;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    height: 50.8px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+@media screen and (max-width: 426px){
+    .loginScreen__body > h1{
+        font-size: 2.125rem;
+    }
+    .loginScreen__body > h2{
+        font-size: 1.55rem;
+        margin-bottom: 15px;
+    }
+    .loginScreen__body > h3{
+        font-size: 1.00rem;
+    }
+    .loginScreen__getStarted {
+        font-size: 1rem;
+    }
+}
+
